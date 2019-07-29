@@ -2,6 +2,11 @@
 
 String Interpolation vs String Format, String Concat and String Builder performance benchmarks
 
+## How to run the test
+```
+dotnet run -c Release
+```
+
 ## Summary
 ```
 BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17134.885 (1803/April2018Update/Redstone4)
