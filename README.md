@@ -9,19 +9,17 @@ dotnet run -c Release
 
 ## Summary
 ```
-BenchmarkDotNet=v0.11.5, OS=Windows 10.0.17134.885 (1803/April2018Update/Redstone4)
-Intel Core i7-2670QM CPU 2.20GHz (Sandy Bridge), 1 CPU, 8 logical and 4 physical cores
-Frequency=2143566 Hz, Resolution=466.5123 ns, Timer=TSC
-.NET Core SDK=2.2.301
-  [Host]     : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
-  DefaultJob : .NET Core 2.2.6 (CoreCLR 4.6.27817.03, CoreFX 4.6.27818.02), 64bit RyuJIT
-```
+BenchmarkDotNet=v0.12.1, OS=macOS 11.0.1 (20B29) [Darwin 20.1.0]
+Intel Core i7-6567U CPU 3.30GHz (Skylake), 1 CPU, 4 logical and 2 physical cores
+.NET Core SDK=5.0.100
+  [Host]     : .NET Core 5.0.0 (CoreCLR 5.0.20.51904, CoreFX 5.0.20.51904), X64 RyuJIT
+  DefaultJob : .NET Core 5.0.0 (CoreCLR 5.0.20.51904, CoreFX 5.0.20.51904), X64 RyuJIT
+
 
 ```
-|              Method |     Mean |     Error |   StdDev |
-|-------------------- |---------:|----------:|---------:|
-|        StringFormat | 474.6 ns | 21.135 ns | 61.65 ns |
-| StringInterpolation | 182.8 ns |  5.666 ns | 16.35 ns |
-|        StringConcat | 173.9 ns |  6.745 ns | 19.46 ns |
-|       StringBuilder | 505.1 ns | 25.581 ns | 74.62 ns |
-```
+|              Method |     Mean |   Error |  StdDev |
+|-------------------- |---------:|--------:|--------:|
+|        StringFormat | 178.8 ns | 2.57 ns | 2.41 ns |
+| StringInterpolation | 101.4 ns | 1.43 ns | 1.20 ns |
+|        StringConcat | 101.2 ns | 1.04 ns | 0.92 ns |
+|       StringBuilder | 250.4 ns | 4.00 ns | 3.54 ns |
